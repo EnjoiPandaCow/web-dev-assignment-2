@@ -4,14 +4,14 @@
     <br>
     <br>
 
-    <div ng-controller="searchController as list">
-        <table align="center" valign="middle">
+    <div id="searchDeliveryPage" ng-controller="searchController as list">
+        <table id="jobsTable" align="center" valign="middle">
             <thead>
-                <td><b><span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>Title</b></td>
-                <td><b><span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>Pick Up</b></td>
-                <td><b><span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>Drop Off</b></td>
-                <td><b><span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>Package Size</b></td>
-                <td><b><span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>Price</b></td>
+            <td><b><span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>Title</b></td>
+            <td><b><span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>Pick Up</b></td>
+            <td><b><span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>Drop Off</b></td>
+            <td><b><span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>Package Size</b></td>
+            <td><b><span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>Price</b></td>
             </thead>
             <tbody ng-repeat="job in jobs | orderBy:'title'">
             <tr style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle"; >
