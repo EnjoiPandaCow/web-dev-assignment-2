@@ -1,0 +1,50 @@
+<div class="jumbotron text-center">
+    <h1>View All Users</h1>
+
+    <br>
+    <br>
+
+
+    <div ng-controller="viewusersController as list">
+        <table align="center" valign="middle">
+            <thead>
+                <td><b><span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>First Name</b></td>
+                <td><b><span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>Last Name</b></td>
+                <td><b><span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>Email Address</b></td>
+                <td><b><span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>Contact Number</b></td>
+
+            </thead>
+            <tbody ng-repeat="user in users | orderBy:'fName'">
+            <tr style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle"; >
+            <td>
+                <span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>{{user.fName}}
+            </td>
+            <td>
+                <span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>{{user.lName}}</span>
+            </td>
+            <td>
+                <span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>{{user.email}}</span>
+            </td>
+            <td>
+                <span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>{{user.contactNo}}</span>
+            </td>
+
+
+            <td>
+
+                <span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>
+
+
+                <button type="button" class="btn btn-danger" ng-click="delete(user._id)">
+                    <span class="glyphicon glyphicon-remove"></span> Remove
+                </button>
+                <button type="button" class="btn btn-info" ng-click="update(user)">
+                    <span class="glyphicon glyphicon-edit"></span> Edit
+                </button>
+                </span>
+            </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

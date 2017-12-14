@@ -1,0 +1,126 @@
+<div class="jumbotron text-center">
+    <h1>Create A New Delivery Job</h1>
+
+
+
+    <div ng-controller="addjobController">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+
+                <form ng-submit="addJob()"
+                      style="margin-top:30px;">
+                    <h3>Please Enter The Details Of Your Job Below</h3>
+                    <div class="form-group" align="center">
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Title"
+                               ng-model="formData.title"
+                               ng-style="{'width': 200 + 'px'}"
+                               required = "true">
+                    </div>
+                    <div class="form-group" align="center">
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Description"
+                               ng-model="formData.desc"
+                               ng-style="{'width': 200 + 'px'}"
+                               required = "true">
+                    </div>
+                    <div class="form-group" align="center">
+                        <select ng-model="formData.sizeOptions" class="form-control" ng-show="formData.sizeOptions" ng-options="option.name for option in options" ng-style="{'width': 200 + 'px'}">
+                        </select>
+                    </div>
+
+                    <! --- Collection Address --- >
+                    <div class="form-group" align="center">
+                        <br>
+                        <p>Collection Location</p>
+                    </div>
+                    <div class="form-group" align="center">
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Street"
+                               ng-model="formData.cStreet"
+                               ng-style="{'width': 200 + 'px'}"
+                               required = "true">
+                    </div>
+                    <div class="form-group" align="center">
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Town"
+                               ng-model="formData.cTown"
+                               ng-style="{'width': 200 + 'px'}"
+                               required = "true">
+                    </div>
+                    <div class="form-group" align="center">
+                        <input type="text"
+                               class="form-control"
+                               placeholder="County"
+                               ng-model="formData.cCounty"
+                               ng-style="{'width': 200 + 'px'}"
+                               required = "true">
+                    </div>
+
+                    <! --- Delivery Address --- >
+                    <div class="form-group" align="center">
+                        <br>
+                        <p>Delivery Location</p>
+                    </div>
+                    <div class="form-group" align="center">
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Street"
+                               ng-model="formData.dStreet"
+                               ng-style="{'width': 200 + 'px'}"
+                               required = "true">
+                    </div>
+                    <div class="form-group" align="center">
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Town"
+                               ng-model="formData.dTown"
+                               ng-style="{'width': 200 + 'px'}"
+                               required = "true">
+                    </div>
+                    <div class="form-group" align="center">
+                        <input type="text"
+                               class="form-control"
+                               placeholder="County"
+                               ng-model="formData.dCounty"
+                               ng-style="{'width': 200 + 'px'}"
+                               required = "true">
+                    </div>
+
+                    <! --- Delivery Date --- >
+                    <div class="form-group" align="center">
+                        <br>
+                        <p>Delivered By</p>
+                    </div>
+                    <div class="form-group" align="center">
+                        <input type="date"
+                               class="form-control"
+                               placeholder="Collection County"
+                               ng-model="formData.dTime"
+                               ng-style="{'width': 200 + 'px'}"
+                               required = "true">
+                    </div>
+
+                    <! --- Price of Delivery --- >
+                    <div class="form-group" align="center">
+                        <br>
+                        <p>Cost Of Delivery</p>
+                    </div>
+                    <div class="form-group" align="center">
+                        <input type="number"
+                               class="form-control"
+                               placeholder="Price"
+                               ng-model="formData.price"
+                               ng-style="{'width': 200 + 'px'}"
+                               required = "true">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Job</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
