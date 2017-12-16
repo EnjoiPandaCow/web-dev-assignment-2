@@ -1,0 +1,42 @@
+<style>
+    .jumbotron {
+        margin-top: 10px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+</style>
+
+<div class="jumbotron text-center">
+    <h1>Add A New Article</h1>
+
+    <div id="addNewsPage" ng-controller="addNewsController">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+
+                <form ng-submit="addNews()"
+                      style="margin-top:30px;">
+                    <h3>Please Enter Article Below</h3>
+                    <div class="form-group" align="center">
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Article Title"
+                               ng-model="formData.title"
+                               ng-style="{'width': 200 + 'px'}"
+                               required = "true"
+                               id = "titleBox">
+                    </div>
+                    <div class="form-group" align="center">
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Article Content"
+                               ng-model="formData.msg"
+                               ng-style="{'height': 200 + 'px'}"
+                               required = "true"
+                               id = "msgBox">
+                    </div>
+                    <button id="addNewsBtn" type="submit" class="btn btn-primary">Add Article</button>
+                </form>
+
+            </div>
+        </div>
+    </div>

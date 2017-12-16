@@ -74,5 +74,11 @@ app.config(function($routeProvider) {
             templateUrl : 'pages/viewusers.ejs',
             controller : 'viewusersController'
 
-        });
+        })
+
+        .when('/addNews', {
+            templateUrl : 'pages/addNews.ejs',
+            controller : 'addNewsController'
+
+         });
 });
