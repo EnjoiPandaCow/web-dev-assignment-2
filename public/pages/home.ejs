@@ -1,14 +1,32 @@
+<style>
+    .jumbotron {
+        margin-top: 10px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .btn {
+        width: 200px;
+        height: 50px;
+        margin-right: 25px;
+        border: black solid;
+        color: black;
+    }
+
+    #job {
+        margin-bottom: 20px;
+    }
+
+</style>
+
 <div class="jumbotron text-center">
-
-
-    <h1>{{ message }}</h1>
-
     <br>
     <br>
+        <div class="row" id="home">
 
-    <div class="row" id="home">
         <div class="col-md-6 col-md-offset-5">
             <p>
+
                 <table>
                     <tr>
                         <td><img src="./images/shyft-logo.png"></td>
@@ -16,4 +34,25 @@
                 </table>
             </p>
         </div></div>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>Please Choose An Option Below</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <a href="#job">
+                    <button id="job" type="button" class="btn btn-secondary">Send A Package</button>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <a href="#user">
+                    <button id="user" type="button" class="btn btn-secondary">Add A User</button>
+                </a>
+            </div>
+        </div>
+    </div>
 </div>

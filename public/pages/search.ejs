@@ -1,3 +1,23 @@
+<style>
+    .jumbotron {
+        margin-top: 10px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    td {
+        border: black solid 1px;
+        padding: 20px;
+    }
+
+    .form-control {
+        width: 1150px;
+        margin-left: 300px;
+        margin-bottom: 20px;
+    }
+</style>
+
+
 <div class="jumbotron text-center">
     <h1>View All Jobs</h1>
 
@@ -6,14 +26,16 @@
 
     <div id="searchDeliveryPage" ng-controller="searchController as list">
         <table id="jobsTable" align="center" valign="middle">
+            <input class="form-control" id="searchInput" type="text" ng-model="jobSearch" placeholder="Search Jobs">
             <thead>
             <td><b><span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>Title</b></td>
             <td><b><span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>Pick Up</b></td>
             <td><b><span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>Drop Off</b></td>
             <td><b><span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>Package Size</b></td>
             <td><b><span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>Price</b></td>
+            <td><b><span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>Options</b></td>
             </thead>
-            <tbody ng-repeat="job in jobs | orderBy:'title'">
+            <tbody ng-repeat="job in jobs | orderBy:'title' | filter: jobSearch">
             <tr style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle"; >
             <td>
                 <span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>{{job.title}}

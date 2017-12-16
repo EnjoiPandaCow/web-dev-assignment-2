@@ -1,3 +1,22 @@
+<style>
+    .jumbotron {
+        margin-top: 10px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    td {
+        border: black solid 1px;
+        padding: 20px;
+    }
+
+    .form-control {
+        width: 1150px;
+        margin-left: 300px;
+        margin-bottom: 20px;
+    }
+</style>
+
 <div class="jumbotron text-center">
     <h1>View All Users</h1>
 
@@ -6,14 +25,15 @@
 
     <div id="viewUsersPage" ng-controller="viewusersController as list">
         <table id="usersTable" align="center" valign="middle">
+            <input class="form-control" id="searchInput" type="text" ng-model="userSearch" placeholder="Search Users">
             <thead>
                 <td><b><span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>First Name</b></td>
                 <td><b><span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>Last Name</b></td>
                 <td><b><span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>Email Address</b></td>
                 <td><b><span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>Contact Number</b></td>
-
+                <td><b><span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>Options</b></td>
             </thead>
-            <tbody ng-repeat="user in users | orderBy:'fName'">
+            <tbody ng-repeat="user in users | filter: userSearch | orderBy: fName">
             <tr style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle"; >
             <td>
                 <span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>{{user.fName}}
@@ -27,7 +47,6 @@
             <td>
                 <span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>{{user.contactNo}}</span>
             </td>
-
 
             <td>
 
