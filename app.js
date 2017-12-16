@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var jobs = require("./routes/job");
+var news = require("./routes/news");
 
 var app = express();
 
@@ -41,6 +42,12 @@ app.post('/users', users.addUser);
 app.put('/users/:id', users.updateUser);
 app.delete('/users/:id', users.deleteUser);
 app.post('/users/search', users.search);
+
+app.get('/news', news.findAll);
+app.get('/news/:id', news.findOne);
+app.post('/news', news.addNews);
+app.put('/news/:id', news.updateNews);
+app.delete('/news/:id', news.deleteNews);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
