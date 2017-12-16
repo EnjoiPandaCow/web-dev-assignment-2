@@ -3,7 +3,7 @@
 
 
 
-    <div ng-controller="addjobController">
+    <div id="jobPage" ng-controller="addjobController">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
 
@@ -16,7 +16,8 @@
                                placeholder="Title"
                                ng-model="formData.title"
                                ng-style="{'width': 200 + 'px'}"
-                               required = "true">
+                               required = "true"
+                               id="titleBox">
                     </div>
                     <div class="form-group" align="center">
                         <input type="text"
@@ -24,7 +25,8 @@
                                placeholder="Description"
                                ng-model="formData.desc"
                                ng-style="{'width': 200 + 'px'}"
-                               required = "true">
+                               required = "true"
+                               id="descBox">
                     </div>
                     <div class="form-group" align="center">
                         <select ng-model="formData.sizeOptions" class="form-control" ng-show="formData.sizeOptions" ng-options="option.name for option in options" ng-style="{'width': 200 + 'px'}">
@@ -42,7 +44,8 @@
                                placeholder="Street"
                                ng-model="formData.cStreet"
                                ng-style="{'width': 200 + 'px'}"
-                               required = "true">
+                               required = "true"
+                               id="cStreetBox">
                     </div>
                     <div class="form-group" align="center">
                         <input type="text"
@@ -50,7 +53,9 @@
                                placeholder="Town"
                                ng-model="formData.cTown"
                                ng-style="{'width': 200 + 'px'}"
-                               required = "true">
+                               required = "true"
+                               id="cTownBox">
+
                     </div>
                     <div class="form-group" align="center">
                         <input type="text"
@@ -58,7 +63,8 @@
                                placeholder="County"
                                ng-model="formData.cCounty"
                                ng-style="{'width': 200 + 'px'}"
-                               required = "true">
+                               required = "true"
+                               id="cCountyBox">
                     </div>
 
                     <! --- Delivery Address --- >
@@ -72,7 +78,8 @@
                                placeholder="Street"
                                ng-model="formData.dStreet"
                                ng-style="{'width': 200 + 'px'}"
-                               required = "true">
+                               required = "true"
+                               id="dStreetBox">
                     </div>
                     <div class="form-group" align="center">
                         <input type="text"
@@ -80,7 +87,8 @@
                                placeholder="Town"
                                ng-model="formData.dTown"
                                ng-style="{'width': 200 + 'px'}"
-                               required = "true">
+                               required = "true"
+                               id="dTownBox">
                     </div>
                     <div class="form-group" align="center">
                         <input type="text"
@@ -88,7 +96,8 @@
                                placeholder="County"
                                ng-model="formData.dCounty"
                                ng-style="{'width': 200 + 'px'}"
-                               required = "true">
+                               required = "true"
+                               id="dCountyBox">
                     </div>
 
                     <! --- Delivery Date --- >
@@ -116,9 +125,10 @@
                                placeholder="Price"
                                ng-model="formData.price"
                                ng-style="{'width': 200 + 'px'}"
-                               required = "true">
+                               required = "true"
+                               id="priceBox">
                     </div>
-                    <button type="submit" class="btn btn-primary">Add Job</button>
+                    <button id="addJobBtn" type="submit" class="btn btn-primary">Add Job</button>
                 </form>
 
             </div>
