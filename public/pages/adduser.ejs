@@ -3,7 +3,7 @@
 
 
 
-    <div ng-controller="adduserController">
+    <div id="addUserPage" ng-controller="adduserController">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
 
@@ -16,7 +16,8 @@
                                placeholder="First Name"
                                ng-model="formData.fName"
                                ng-style="{'width': 200 + 'px'}"
-                               required = "true">
+                               required = "true"
+                               id = "fNameBox">
                     </div>
                     <div class="form-group" align="center">
                         <input type="text"
@@ -24,7 +25,8 @@
                                placeholder="Last Name"
                                ng-model="formData.lName"
                                ng-style="{'width': 200 + 'px'}"
-                               required = "true">
+                               required = "true"
+                               id = "lNameBox">
                     </div>
                     <div class="form-group" align="center">
                         <input type="email"
@@ -32,7 +34,8 @@
                                placeholder="Email Address"
                                ng-model="formData.email"
                                ng-style="{'width': 200 + 'px'}"
-                               required = "true">
+                               required = "true"
+                               id = "emailBox">
                     </div>
                     <div class="form-group" align="center">
                         <input type="tel"
@@ -40,7 +43,8 @@
                                placeholder="Contact Number"
                                ng-model="formData.contactNo"
                                ng-style="{'width': 200 + 'px'}"
-                               required = "true">
+                               required = "true"
+                               id = "contactNumBox">
                     </div>
                     <div class="form-group" align="center">
                         <input type="password"
@@ -48,7 +52,8 @@
                                placeholder="Password"
                                ng-model="formData.password"
                                ng-style="{'width': 200 + 'px'}"
-                               required = "true">
+                               required = "true"
+                               id = "passwordBox">
                     </div>
 
 
@@ -63,7 +68,8 @@
                                placeholder="Street"
                                ng-model="formData.street"
                                ng-style="{'width': 200 + 'px'}"
-                               required = "true">
+                               required = "true"
+                               id="streetBox">
                     </div>
                     <div class="form-group" align="center">
                         <input type="text"
@@ -71,7 +77,8 @@
                                placeholder="Town"
                                ng-model="formData.town"
                                ng-style="{'width': 200 + 'px'}"
-                               required = "true">
+                               required = "true"
+                               id="townBox">
                     </div>
                     <div class="form-group" align="center">
                         <input type="text"
@@ -79,11 +86,12 @@
                                placeholder="County"
                                ng-model="formData.county"
                                ng-style="{'width': 200 + 'px'}"
-                               required = "true">
+                               required = "true"
+                               id="countyBox">
                     </div>
 
 
-                    <button type="submit" class="btn btn-primary">Add User</button>
+                    <button id="addUserBtn" type="submit" class="btn btn-primary">Add User</button>
                 </form>
 
             </div>
