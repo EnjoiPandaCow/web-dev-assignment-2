@@ -8,7 +8,7 @@ app.controller('addNewsController', ['$scope', '$location', '$http', function($s
         $http.post('/news', $scope.formData)
             .success(function(data) {
                 $scope.news = data;
-                $location.path('/news');
+                $location.path('/viewNews');
                 console.log(data);
             })
             .error(function(data) {

@@ -4,7 +4,6 @@ var webdriver = require('selenium-webdriver');
 var expect = chai.expect;
 var until = webdriver.until;
 var By = webdriver.By;
-
 var driver;
 var mochaTimeOut = 30000;
 var numUsers;
