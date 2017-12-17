@@ -15,5 +15,19 @@ app.controller('viewNewsController', ['$scope', '$http', '$location', 'myService
             });
     }
 
+    $scope.delete = function(_id) {
+        if (confirm("Are you sure you want to delete this Article")) {
+            console.log('Deleting id : ' + _id);
+            $http.delete('/news/' + _id)
+                .success(function(data) {
+                    console.log(data);
+                    findAll();
+                })
+                .error(function(data) {
+                    console.log('Error: ' + data);
+                });
+        }
+    };
+
 }
 ]);

@@ -33,7 +33,7 @@ describe('News tests', function () {
 
                 news1._id = "59f6f0b99bd9dc7f544d7dbc";
                 news1.title = "Test Post 1";
-                news1.msg = "This is a Test";
+                news1.msg = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eleifend sem et vestibulum blandit. Maecenas porttitor mauris nec erat vehicula finibus. Proin quis urna auctor, facilisis risus nec, elementum felis. Suspendisse vel placerat lacus, ac condimentum mauris. Suspendisse ac pretium massa. Cras ex risus, mattis ac egestas sed, imperdiet non elit. Proin libero lacus, tincidunt nec laoreet ut, vulputate sagittis metus. Pellentesque condimentum lacinia ligula at interdum.";
                 
                 news1.save(function (err) {
                     if (err)
@@ -43,7 +43,7 @@ describe('News tests', function () {
 
                         news2._id = "59f6f14b9bd9dc7f544d7fdf";
                         news2.title = "Test Post 2";
-                        news2.msg = "This is a Test 2";
+                        news2.msg = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eleifend sem et vestibulum blandit. Maecenas porttitor mauris nec erat vehicula finibus. Proin quis urna auctor, facilisis risus nec, elementum felis. Suspendisse vel placerat lacus, ac condimentum mauris. Suspendisse ac pretium massa. Cras ex risus, mattis ac egestas sed, imperdiet non elit. Proin libero lacus, tincidunt nec laoreet ut, vulputate sagittis metus. Pellentesque condimentum lacinia ligula at interdum.";
 
                         news2.save(function (err) {
                             if (err)
@@ -75,12 +75,12 @@ describe('News tests', function () {
                     expect(result).to.include({
                         _id : "59f6f0b99bd9dc7f544d7dbc",
                         title : "Test Post 1",
-                        msg : "This is a Test"
+                        msg : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eleifend sem et vestibulum blandit. Maecenas porttitor mauris nec erat vehicula finibus. Proin quis urna auctor, facilisis risus nec, elementum felis. Suspendisse vel placerat lacus, ac condimentum mauris. Suspendisse ac pretium massa. Cras ex risus, mattis ac egestas sed, imperdiet non elit. Proin libero lacus, tincidunt nec laoreet ut, vulputate sagittis metus. Pellentesque condimentum lacinia ligula at interdum."
                     });
                     expect(result).to.include({
                         _id : "59f6f0b99bd9dc7f544d7dbc",
                         title : "Test Post 1",
-                        msg : "This is a Test"
+                        msg : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eleifend sem et vestibulum blandit. Maecenas porttitor mauris nec erat vehicula finibus. Proin quis urna auctor, facilisis risus nec, elementum felis. Suspendisse vel placerat lacus, ac condimentum mauris. Suspendisse ac pretium massa. Cras ex risus, mattis ac egestas sed, imperdiet non elit. Proin libero lacus, tincidunt nec laoreet ut, vulputate sagittis metus. Pellentesque condimentum lacinia ligula at interdum."
                     });
                     done();
 
@@ -105,7 +105,7 @@ describe('News tests', function () {
                     expect(result).to.include({
                         _id: "59f6f0b99bd9dc7f544d7dbc",
                         title: "Test Post 1",
-                        msg: "This is a Test"
+                        msg: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eleifend sem et vestibulum blandit. Maecenas porttitor mauris nec erat vehicula finibus. Proin quis urna auctor, facilisis risus nec, elementum felis. Suspendisse vel placerat lacus, ac condimentum mauris. Suspendisse ac pretium massa. Cras ex risus, mattis ac egestas sed, imperdiet non elit. Proin libero lacus, tincidunt nec laoreet ut, vulputate sagittis metus. Pellentesque condimentum lacinia ligula at interdum."
                     });
                     done();
                 });
@@ -185,7 +185,7 @@ describe('News tests', function () {
                             expect(result).to.include({
                                 _id : "59f6f0b99bd9dc7f544d7dbc",
                                 title : "Updated Title",
-                                msg : "This is a Test"
+                                msg : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eleifend sem et vestibulum blandit. Maecenas porttitor mauris nec erat vehicula finibus. Proin quis urna auctor, facilisis risus nec, elementum felis. Suspendisse vel placerat lacus, ac condimentum mauris. Suspendisse ac pretium massa. Cras ex risus, mattis ac egestas sed, imperdiet non elit. Proin libero lacus, tincidunt nec laoreet ut, vulputate sagittis metus. Pellentesque condimentum lacinia ligula at interdum."
                             });
                             done();
                         });

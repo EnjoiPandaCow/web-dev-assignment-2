@@ -17,7 +17,6 @@
   <script src="/javascripts/controllers/updateJobController.js"></script>
   <script src="/javascripts/controllers/addNewsController.js"></script>
   <script src="/javascripts/controllers/viewNewsController.js"></script>
-
   <style>
     footer {
       background-color: #f2f2f2;
@@ -27,8 +26,16 @@
       margin-right: 50px;
     }
 
-  </style>
+    nav {
+      margin-left: 50px;
+      margin-top: 15px;
+      margin-right: 50px
+    }
 
+    #nav1 {
+      margin-left: 23em;
+    }
+  </style>
 </head>
 
 <body ng-controller="mainController">
@@ -37,17 +44,13 @@
 <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#/"> Shyft</a>
     </div>
-
-    <ul class="nav navbar-nav navbar-right">
+    <ul id="nav1" class="nav navbar-nav navbar-center">
       <li><a href="#/"><i class="fa fa-home"></i> Home</a></li>
-      <li><a href="#job"><i class="fa fa-paper-plane"></i> Send Item</a></li>
       <li><a href="#jobs"><i class="fa fa-search"></i> Search Delivery</a></li>
-      <li><a href="#user"><i class="fa fa-user"></i> Add User</a></li>
       <li><a href="#users"><i class="fa fa-users"></i> View Users</a></li>
+      <li><a href="#viewNews"><i class="fa fa-bullhorn"></i> View News</a></li>
     </ul>
-
   </div>
 </nav>
 
