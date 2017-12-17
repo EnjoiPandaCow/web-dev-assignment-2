@@ -80,5 +80,11 @@ app.config(function($routeProvider) {
             templateUrl : 'pages/addNews.ejs',
             controller : 'addNewsController'
 
-         });
+         })
+
+        .when('/viewNews', {
+                templateUrl : 'pages/viewNews.ejs',
+                controller : 'viewNewsController'
+
+        });
 });
