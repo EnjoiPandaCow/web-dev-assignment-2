@@ -1,6 +1,5 @@
 var app = angular.module('ShyftWebApp', ['ngRoute']);
 
-
 app.service('myService', function(){
    var myService = {
        fName0: '',
@@ -34,10 +33,18 @@ app.service('myService1', function(){
     return myService1;
 });
 
+app.service('newsService', function(){
+    var newsService = {
+        titleNews: '',
+        msgNews : '',
+        identityNews: ''
+    };
+    return newsService;
+});
+
 app.config(function($routeProvider) {
     $routeProvider
 
-    // route for the home page
         .when('/', {
             templateUrl : 'pages/home.ejs',
             controller  : 'mainController'
@@ -82,9 +89,17 @@ app.config(function($routeProvider) {
 
          })
 
+        .when('/updateNews', {
+            templateUrl : 'pages/updateNews.ejs',
+            controller : 'updateNewsController'
+
+        })
+
         .when('/viewNews', {
                 templateUrl : 'pages/viewNews.ejs',
                 controller : 'viewNewsController'
 
         });
+
+
 });

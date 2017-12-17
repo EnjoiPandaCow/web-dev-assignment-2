@@ -1,6 +1,6 @@
 var app = angular.module('ShyftWebApp');
 
-app.controller('viewNewsController', ['$scope', '$http', '$location', 'myService', function($scope, $http, $location, myService) {
+app.controller('viewNewsController', ['$scope', '$http', '$location', 'newsService', function($scope, $http, $location, newsService) {
 
     findAll();
 
@@ -14,6 +14,14 @@ app.controller('viewNewsController', ['$scope', '$http', '$location', 'myService
                 console.log('Error ' + data);
             });
     }
+
+    $scope.update = function(article_details) {
+
+        newsService.title = article_details.title;
+        newsService.msg = article_details.msg;
+        newsService.identityNews = article_details._id;
+        $location.path('/updateNews')
+    };
 
     $scope.delete = function(_id) {
         if (confirm("Are you sure you want to delete this Article")) {
