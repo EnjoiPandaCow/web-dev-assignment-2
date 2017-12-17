@@ -10,13 +10,13 @@ var numUsers;
 var pageSelector;
 var navBarSelector;
 
-test.describe('Add News Page', function() {
+test.describe('Update News Page', function() {
     this.timeout(mochaTimeOut);
     test.before( function() {
         driver = new webdriver.Builder()
             .withCapabilities( webdriver.Capabilities.chrome() )
             .build();
-        pageSelector = By.id('addNewsPage');
+        pageSelector = By.id('updateNewsPage');
         navBarSelector = By.tagName('nav');
         driver.findElements(By.tagName('tr'))
             .then( function( users ) {
@@ -24,7 +24,7 @@ test.describe('Add News Page', function() {
             });
     } );
     test.beforeEach( function() {
-        driver.get('http://localhost:3000/?#/addNews');
+        driver.get('http://localhost:3000/?#/updateNews');
         driver.wait(until.elementLocated(pageSelector), 20000);
     } );
     test.it('shows the main body', function() {
@@ -43,7 +43,7 @@ test.describe('Add News Page', function() {
         driver.findElement(By.tagName('h1'))
             .then(function(element) {
                 element.getText().then(function(text){
-                    expect(text).to.equal('Add A New Article');
+                    expect(text).to.equal('Update An Article');
                 })
             });
     } );
@@ -51,11 +51,11 @@ test.describe('Add News Page', function() {
         driver.findElement(By.tagName('h3'))
             .then(function(element) {
                 element.getText().then(function(text){
-                    expect(text).to.equal('Please Enter Article Below');
+                    expect(text).to.equal('Please Enter New Article Details Below');
                 })
             });
     } );
-    test.it( 'accepts a new article', function() {
+    test.it( 'updates an article', function() {
         var input = driver .findElement(By.id('titleBox'));
         input
             .then(function(){
@@ -81,21 +81,11 @@ test.describe('Add News Page', function() {
                 element.sendKeys('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus tortor id augue egestas, vel consequat odio efficitur. Praesent cursus, neque eu tristique dictum, odio ex dignissim dolor, id suscipit urna sapien vel metus.');
             })
             .then(function(){
-                return driver.findElement(By.id('addNewsBtn'));
+                return driver.findElement(By.id('updateNewsBtn'));
             })
             .then(function(element){
                 element.submit();
             })
-
-            .then(function() {
-                driver.wait(until.elementLocated(By.id('viewNewsPage')),20000);
-                return driver.findElements(By.tagName('tr'));
-            })
-            .then( function( users ) {
-                expect(users.length).to.not.equal(numUsers + 0) ;
-                return users;
-            })
-
     } );
 
     test.after(function() {

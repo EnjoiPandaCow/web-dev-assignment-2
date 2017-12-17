@@ -30,14 +30,12 @@ test.describe('Home page', function() {
                 expect(element).to.not.equal(null );
             });
     });
-
     test.it( 'shows the nav bar', function() {
         driver.findElement(navBarSelector)
             .then(function(element) {
                 expect(element).to.not.equal(null );
             });
     } );
-
     test.it( 'shows the main image', function() {
         driver.findElement(By.tagName('img')).then(function(element) {
             element.getAttribute('src').then(function(text) {

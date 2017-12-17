@@ -4,7 +4,6 @@ var webdriver = require('selenium-webdriver');
 var expect = chai.expect;
 var until = webdriver.until;
 var By = webdriver.By;
-
 var driver;
 var mochaTimeOut = 30000;
 var numUsers;
@@ -64,7 +63,7 @@ test.describe('Update User Page', function() {
                 })
             });
     } );
-    test.it( 'updates a job', function() {
+    test.it( 'updates a user', function() {
         var input = driver .findElement(By.id('fNameBox'));
         input
             .then(function(){
